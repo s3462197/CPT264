@@ -1,23 +1,28 @@
+#create sysadmin group
 group { 'sysadmin':
   			  ensure => 'present',
   			  gid    => '500',
      }
-	 
+
+#create cars group	 
 group { 'cars':
   			  ensure => 'present',
   			  gid    => '501',
      }
-	 
+
+#create trucks group	 
 group { 'trucks':
   			  ensure => 'present',
   			  gid    => '502',
      }
-	 
+
+#create ambulances group	 
 group { 'ambulances':
   			  ensure => 'present',
   			  gid    => '503',
      }
 
+#create user becca
 user { 'becca':
  			  ensure           => 'present',
       home             	=> '/home/becca',
@@ -30,7 +35,8 @@ user { 'becca':
       shell            	=> '/bin/bash',
       uid              	=> '10012197',
     }
-	
+
+#create user fred
 user { 'fred':
 	  ensure           	=> 'present',
       home             	=> '/home/fred',
@@ -43,7 +49,8 @@ user { 'fred':
       shell            	=> '/bin/csh',
       uid              	=> '10022197',
     }
-	
+
+#create user wilma	
 user { 'wilma':
 	  ensure           	=> 'present',
       home             	=> '/home/wilma',
@@ -55,7 +62,8 @@ user { 'wilma':
       password_min_age 	=> '0',      
       uid              	=> '10032197',	  
     }
-	
+
+#add wilma's ssh key	
 ssh_authorized_key { 'wilma':
   ensure => present,
   user   => 'wilma',
