@@ -13,8 +13,9 @@ ensure	=>	running,
 enable	=>	true,
 }
 
-#broken
-#service { 'tigervnc-server':
-#ensure	=>	running,
-#enable	=>	true,
-#}
+/* attempted vnc
+service { 'vncserver':
+ensure	=>	running,
+enable	=>	true,
+}
+*/
