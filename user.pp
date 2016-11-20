@@ -1,4 +1,4 @@
-#create sysadmin group
+#create sysadmin group.
 group { 'sysadmin':
   			  ensure => 'present',
   			  gid    => '500',
