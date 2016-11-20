@@ -1,4 +1,4 @@
-#disable ssh root access
+#disable ssh root access.
 file_line { 'sshRootDisable':
 	ensure 		=> 	present,
 	path   		=> 	'/etc/ssh/sshd_config',
