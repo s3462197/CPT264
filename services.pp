@@ -1,8 +1,9 @@
-#openssh
+#opensshm
 service { 'sshd':
 ensure	=>	running,
 enable	=>	true,
 }
+
 
 service { 'httpd':
 ensure	=>	running,
