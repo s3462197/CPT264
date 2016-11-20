@@ -3,9 +3,15 @@ package { 'openssl':
   name   => openssl,
 }
 
-package { 'openssh':
+package { 'openssh-server':
   ensure  => installed,
-  name    => openssh,
+  name    => openssh-server,
+  require => Package['openssl'],
+}
+
+package { 'openssh-clients':
+  ensure  => installed,
+  name    => openssh-clients,
   require => Package['openssl'],
 }
 
