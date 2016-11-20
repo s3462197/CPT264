@@ -36,7 +36,7 @@ user { 'fred':
       home             	=> '/home/fred',
 	  managehome 		=> true,
       comment           => 'Fred Flinstone',
-      groups            => ['trucks', 'cars'],
+      groups            => ['trucks', 'cars', 'wheel'],
       password         	=> '$1$efsACfEN$cTFuuJUBnS0zsNQ/P0UaQ.',
       password_max_age 	=> '99999',
       password_min_age 	=> '0',
